@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Creating website with 2 layout</title>
+        <style>
+            body{
+                font-family: Arial, Helvetica, sans-serif;
+                padding: 0;
+                margin: 0;
+                box-sizing: border-box;
+            }
+            header{
+                background-color: gray;
+                color: white;
+                text-align: center;
+                padding: 15px 0;
+            }
+
+            two-column{
+                display: grid;
+                flex-direction: row;
+            }
+            column-1 {
+                background-color: antiquewhite;
+                width: 50px;
+                padding: 10px;
+                margin:20px;
+            }
+            column-2{
+
+            }
+           
+            footer{
+                background-color: gray;
+                color: white;
+                text-align: center;
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            <h1>Your website</h1>
+        </header>
+
+        <main>
+            <two_column>
+                <column-1>
+                    <h2>Welcome to your website</h2>
+                    <p1>this is the main content area of your website</p1>
+                </column-1>
+
+                <column-2">
+                    <ul>
+                        <li><a href="#">home</a></li>
+                        <li><a href="#">about</a></li>
+                        <li><a href="#">service</a></li>
+                        <li><a href="#">contact</a></li>
+                    </ul>
+                </column-2>
+            </two_column>
+        </main>
+        <footer>
+            &copy; 2023 your website. all right reserve
+        </footer>
+    </body>
+</html>
