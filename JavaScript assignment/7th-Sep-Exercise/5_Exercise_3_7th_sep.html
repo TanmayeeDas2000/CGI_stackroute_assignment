@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Random Quote Generator</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+
+        #quote {
+            font-size: 24px;
+            margin: 20px;
+        }
+
+        #generate-button {
+            padding: 10px 20px;
+            font-size: 18px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h1>Random Quote Generator</h1>
+    <p id="quote"></p>
+    <button id="generate-button">Generate Random Quote</button>
+
+    <script>
+        // Array of quotes
+        var quotes = [
+            "Always believe something wonderful is about to happen. —Unknown." ,
+            "Our greatest glory is not in never falling, but in rising every time we fall. —Confucius.",
+            "Today you are you. That is truer than true. There is no one alive who is youer than you!” —Dr. Seuss",
+            "What you do today can improve all your tomorrows. —Ralph",
+            "The only thing we have to fear is fear itself. - Franklin D. Roosevelt"
+        ];
+
+        // Function to generate and display a random quote
+        function generateRandomQuote() {
+            var randomIndex = Math.floor(Math.random() * quotes.length);
+            var randomQuote = quotes[randomIndex];
+            document.getElementById("quote").textContent = randomQuote;
+        }
+
+        // Add a click event listener to the button
+        document.getElementById("generate-button").addEventListener("click", generateRandomQuote);
+
+        // Initial quote display
+        generateRandomQuote();
+    </script>
+</body>
+</html>
